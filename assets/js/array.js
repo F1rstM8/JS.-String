@@ -15,9 +15,9 @@ const stringsHref = [
   "https://linkedin.com",
   "ftp://host.com",
   "http://reddit.com",
-  "https://medium.com"
+  "https://medium.com",
 ];
 
-const httpOnly = stringsHref.filter(link => link.startsWith("http://"));
+const httpOnly = stringsHref.filter((link) => link.startsWith("http://"));
 
 console.log(httpOnly);
