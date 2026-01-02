@@ -1,4 +1,3 @@
-
 console.log("--- ЗАВДАННЯ 1 ---");
 const stringsHref = [
   "http://example.com",
@@ -57,45 +56,29 @@ const newStr = str
 console.log(newStr);
 
 console.log("--- ЗАВДАННЯ 4 ---");
-const countVowels = (str) => {
-  const vowels = "aeiou";
+const countVowels = (str) =>
+  [...str].filter((char) => "aeiouAEIOU".includes(char)).length;
 
-  const foundVowels = str
-    .toLowerCase()
-    .split("")
-    .filter((char) => vowels.includes(char));
-
-  return foundVowels.length;
-};
-
-console.log(countVowels("Hello World"));
+console.log(countVowels("Hello"));
+console.log(countVowels("Apple"));
 console.log(countVowels("JavaScript"));
-console.log(countVowels("Education"));
-console.log(countVowels("FreshCode"));
+console.log(countVowels("Sky"));
 
 console.log("--- ЗАВДАННЯ 5 ---");
-const isPalindrome = (str) => {
-  const lowerStr = str.toLowerCase(); // Перетворюємо рядок у нижній регістр, щоб уникнути проблем з регістром
-  const reversedStr = lowerStr.split("").reverse().join("");
 
-  return lowerStr === reversedStr;
-};
+const isPalindrome = (str) =>
+  str.toLowerCase() === str.toLowerCase().split("").reverse().join("");
 
-console.log(isPalindrome("madam"));
-console.log(isPalindrome("hello"));
 console.log(isPalindrome("Anna"));
-
+console.log(isPalindrome("Madam"));
+console.log(isPalindrome("Level"));
+console.log(isPalindrome("Hello"));
+console.log(isPalindrome("12321"));
 
 console.log("--- ЗАВДАННЯ 6 ---");
-const findLongestWord = (str) => {
-  const words = str.split(" ");
-
-  words.sort((a, b) => b.length - a.length);
-
-  return words[0];
-};
+const findLongestWord = (str) =>
+  str.split(" ").sort((a, b) => b.length - a.length)[0];
 
 console.log(findLongestWord("Google do a brain roll")); // Виведе: "Google"
 console.log(findLongestWord("FreshCode Training Center")); // Виведе: "FreshCode" або "Training" бо однакова довжина
 console.log(findLongestWord("JavaScript is amazing")); // Виведе: "JavaScript"
-
