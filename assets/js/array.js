@@ -1,3 +1,4 @@
+
 console.log("--- ЗАВДАННЯ 1 ---");
 const stringsHref = [
   "http://example.com",
@@ -83,4 +84,18 @@ const isPalindrome = (str) => {
 console.log(isPalindrome("madam"));
 console.log(isPalindrome("hello"));
 console.log(isPalindrome("Anna"));
+
+
+console.log("--- ЗАВДАННЯ 6 ---");
+const findLongestWord = (str) => {
+  const words = str.split(" ");
+
+  words.sort((a, b) => b.length - a.length);
+
+  return words[0];
+};
+
+console.log(findLongestWord("Google do a brain roll")); // Виведе: "Google"
+console.log(findLongestWord("FreshCode Training Center")); // Виведе: "FreshCode" або "Training" бо однакова довжина
+console.log(findLongestWord("JavaScript is amazing")); // Виведе: "JavaScript"
 
