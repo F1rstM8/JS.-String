@@ -1,16 +1,12 @@
-console.log("--- ЗАВДАННЯ 4 ---");
-const countVowels = (str) => {
-  const vowels = "aeiou";
+console.log("--- ЗАВДАННЯ 5 ---");
+const isPalindrome = (str) => {
+  const lowerStr = str.toLowerCase(); // Перетворюємо рядок у нижній регістр, щоб уникнути проблем з регістром
 
-  const foundVowels = str
-    .toLowerCase()
-    .split("")
-    .filter((char) => vowels.includes(char));
+  const reversedStr = lowerStr.split("").reverse().join("");
 
-  return foundVowels.length;
+  return lowerStr === reversedStr;
 };
 
-console.log(countVowels("Hello World"));
-console.log(countVowels("JavaScript"));
-console.log(countVowels("Education"));
-console.log(countVowels("FreshCode"));
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello"));
+console.log(isPalindrome("Anna"));
