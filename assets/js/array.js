@@ -1,6 +1,3 @@
-
-
-
 console.log("--- ЗАВДАННЯ 1 ---");
 const stringsHref = [
   "http://example.com",
@@ -48,17 +45,15 @@ const htmlFiles = fileNames.filter((file) => file.endsWith(".html"));
 
 console.log(htmlFiles);
 
-
 console.log("--- ЗАВДАННЯ 3 ---");
-const str = 'abcde abcde abcde abcde';
+const str = "abcde abcde abcde abcde";
 
 const newStr = str
-  .split(' ') 
-  .map(word => '!' + word.slice(1)) 
-  .join(' '); 
+  .split(" ")
+  .map((word) => "!" + word.slice(1))
+  .join(" ");
 
-console.log(newStr); 
-
+console.log(newStr);
 
 console.log("--- ЗАВДАННЯ 4 ---");
 const countVowels = (str) => {
@@ -76,4 +71,3 @@ console.log(countVowels("Hello World"));
 console.log(countVowels("JavaScript"));
 console.log(countVowels("Education"));
 console.log(countVowels("FreshCode"));
-
