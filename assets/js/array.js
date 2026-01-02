@@ -71,3 +71,4 @@ console.log(countVowels("Hello World"));
 console.log(countVowels("JavaScript"));
 console.log(countVowels("Education"));
 console.log(countVowels("FreshCode"));
+
