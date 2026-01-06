@@ -56,8 +56,8 @@ const newStr = str
 console.log(newStr);
 
 console.log("--- ЗАВДАННЯ 4 ---");
-const countVowels = (str) =>
-  [...str].filter((char) => "aeiouAEIOU".includes(char)).length;
+const countVowels = (str, letters = "aeiouyAEIOUY") =>
+  [...str].filter((char) => letters.includes(char)).length;
 
 console.log(countVowels("Hello"));
 console.log(countVowels("Apple"));
